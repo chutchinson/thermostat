@@ -1,0 +1,65 @@
+:host {
+    box-sizing: border-box;
+    display: inline-flex;
+    contain: content;
+    background-color: rgb(245, 246, 250);
+    border-radius: 100%;
+    outline: none !important;
+    user-select: none;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: transparent;
+    cursor: default;
+}
+
+:host(:active) .wrapper {
+    background-color: darken(rgb(245, 246, 250), 5%);
+}
+
+:host([checked]) {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.5) -125%,
+        var(--button-color), 
+        rgba(0, 0, 0, 0.50) 250%);
+}
+
+.wrapper {
+    @include clickable();
+    touch-action: manipulation;
+    box-sizing: border-box;
+    display: flex;
+    flex-basis: 100%;
+    flex-grow: 1;
+    text-transform: uppercase;
+    background-color: transparent;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 100%;
+    padding: 0.5em;
+    margin: 0.25em;
+    background-color: white;
+    color: var(--button-color, rgb(145, 169, 182));
+    box-shadow: 0 2px 4px 0 rgb(0, 0, 0, 0.15);
+    outline: none;
+    user-select: none;
+}
+
+:host([size="icon"]) {
+    & span {
+        margin-bottom: 0.25em;
+    }
+}
+
+::slotted(span) {
+    font-size: 0.35rem;
+    margin-bottom: 1em;
+}
+
+.wrapper ::slotted([slot="start"]) {
+    margin-right: $pad-sm;
+}
+
+.wrapper ::slotted([slot="end"]) {
+    margin-left: $pad-sm;
+}

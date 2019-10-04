@@ -1,0 +1,18 @@
+@mixin clickable() {
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+}
+
+@mixin component() {
+    box-sizing: border-box;
+    display: block;
+    user-select: none;
+    padding: $pad-md;
+    margin: $pad-sm;
+}
+
+@mixin border($color) {
+    border: 1px solid $color;
+    border-radius: $border-radius;
+}

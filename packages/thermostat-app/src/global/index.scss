@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap');
+
+body, html {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+div, p, section, aside, header, footer,
+span, strong, em, b, i, u, a,
+h1, h2, h3, h4, h5, h6,
+ol, ul, li, dd, dl,
+input, textarea, select, option, button,
+img, object, audio, video, svg {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    user-select: none;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: baseline;
+    text-align: left;
+    text-transform: none;
+}
+
+ol, ul, li {
+    list-style: none;
+}

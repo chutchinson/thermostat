@@ -1,0 +1,10 @@
+.vs/
+.vscode/
+.stencil/
+
+www/
+dist/
+node_modules/
+design/references
+
+*.log
